@@ -1,10 +1,10 @@
-(ns test.core
+(ns firstproj.core
   (:require
    [reagent.dom :as rdom]
    [re-frame.core :as re-frame]
-   [test.events :as events]
-   [test.views :as views]
-   [test.config :as config]
+   [firstproj.events :as events]
+   [firstproj.views :as views]
+   [firstproj.config :as config]
    ))
 
 

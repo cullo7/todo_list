@@ -1,4 +1,4 @@
-(ns test.db)
+(ns firstproj.db)
 
 (def default-db
   {:name "re-frame"})

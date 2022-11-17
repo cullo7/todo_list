@@ -1,4 +1,4 @@
-(ns test.config)
+(ns firstproj.config)
 
 (def debug?
   ^boolean goog.DEBUG)

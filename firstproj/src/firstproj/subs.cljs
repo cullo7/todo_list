@@ -1,4 +1,4 @@
-(ns test.subs
+(ns firstproj.subs
   (:require
    [re-frame.core :as re-frame]))
 
@@ -6,3 +6,8 @@
  ::name
  (fn [db]
    (:name db)))
+
+(re-frame/reg-sub
+ ::loading
+ (fn [db]
+   (:loading db)))
