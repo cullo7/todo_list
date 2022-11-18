@@ -25,5 +25,12 @@
                   :uri             "https://reqres.in/api/users?page=2"
                   :timeout         8000                                           ;; optional see API docs
                   :response-format (ajax/json-response-format {:keywords? true})  ;; IMPORTANT!: You must provide this.
-                  :on-success      [:good-http-result]
+                  :on-success      [::fetch-users-success]
                   :on-failure      [:bad-http-result]}}))
+
+(re-frame/reg-event-db
+::fetch-users-success
+(fn [db [_ {:keys [data]}]]
+    (-> db
+    	(assoc :loading false)
+	(assoc :users data))))

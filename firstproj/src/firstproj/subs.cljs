@@ -11,3 +11,9 @@
  ::loading
  (fn [db]
    (:loading db)))
+
+(re-frame/reg-sub
+ ::users
+ (fn [db]
+   (:users db)))
+
